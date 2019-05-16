@@ -40,6 +40,12 @@ source planet-env/bin/activate
 pip install requests retrying jq
 ```
 
+Installing npm and geojsonio-cli
+```sh
+
+```
+
+
 # Tests
 - Tests performed on this project. What did you do? Which files were used? Was it successful?
 
