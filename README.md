@@ -42,9 +42,27 @@ pip install requests retrying jq
 
 Installing npm and geojsonio-cli
 ```sh
-
+sudo apt install npm
+sudo npm install -g geojsonio-cli
 ```
 
+# Process
+1. Setup filters in `demo_filters.py`
+2. Use `search_endpoint.py` to locate ids
+3. Once individual ids are located, acquire asset types
+```sh
+# Getting asset types
+# $PLANET_API_KEY is the name of the env variable storing our api key
+curl -L -H "Authorization: api-key $PLANET_API_KEY" \
+    'https://api.planet.com/data/v1/item-types/REOrthoTile/items/20160707_195147_1057916_RapidEye-1/assets' \
+    | jq 'keys'
+# Checking status of asset, if the status is inactive move to step 4
+curl -L -H "Authorization: api-key $PLANET_API_KEY" \
+    'https://api.planet.com/data/v1/item-types/REOrthoTile/items/20160707_195147_1057916_RapidEye-1/assets/' \
+    | jq .visual.status
+```
+4. Activate asset type per given id using `activation.py`
+5. This will generate a download url. Open url in browser or access with `curl` or `wget`.
 
 # Tests
 - Tests performed on this project. What did you do? Which files were used? Was it successful?
