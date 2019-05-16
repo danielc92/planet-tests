@@ -49,8 +49,8 @@ sudo npm install -g geojsonio-cli
 ```
 
 # Process
-1. Setup filters in `demo_filters.py`
-2. Use `search_endpoint.py` to locate ids
+1. Setup filters in `demo_filters.py`, providing an area of interest. Filters can filter by date range, cloud cover % and coordinates. Coordinates are listed in an array of 5 long/lats (making up a square box).
+2. Use `search_endpoint.py` to locate individual ids based on filters set up previously.
 3. Once individual ids are located, acquire asset types
 ```sh
 # Getting asset types
