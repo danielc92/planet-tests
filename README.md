@@ -53,7 +53,7 @@ sudo npm install -g geojsonio-cli
 2. Use `search_endpoint.py` to locate individual ids based on filters set up previously.
 ```sh
 # This commadn will return a list of ids based on the filter set above.
- python examples/search_endpoint.py | jq '.features[].id'
+ python search_endpoint.py | jq '.features[].id'
 ```
 3. Once individual ids are located, you can acquire asset types for a given id
 ```sh

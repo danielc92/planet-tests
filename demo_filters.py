@@ -39,7 +39,7 @@ date_range_filter = {
   "type": "DateRangeFilter",
   "field_name": "acquired",
   "config": {
-    "gte": "2019-03-01T00:00:00.000Z",
+    "gte": "2018-01-01T00:00:00.000Z",
     "lte": "2019-04-01T00:00:00.000Z"
   }
 }

@@ -1,7 +1,7 @@
 import os
 import requests
 
-item_id = "20160707_195147_1057916_RapidEye-1"
+item_id = "20190211_001638_5521506_RapidEye-4"
 item_type = "REOrthoTile"
 asset_type = "visual"
 
