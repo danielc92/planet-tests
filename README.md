@@ -51,7 +51,11 @@ sudo npm install -g geojsonio-cli
 # Process
 1. Setup filters in `demo_filters.py`, providing an area of interest. Filters can filter by date range, cloud cover % and coordinates. Coordinates are listed in an array of 5 long/lats (making up a square box).
 2. Use `search_endpoint.py` to locate individual ids based on filters set up previously.
-3. Once individual ids are located, acquire asset types
+```sh
+# This commadn will return a list of ids based on the filter set above.
+ python examples/search_endpoint.py | jq '.features[].id'
+```
+3. Once individual ids are located, you can acquire asset types for a given id
 ```sh
 # Getting asset types
 # $PLANET_API_KEY is the name of the env variable storing our api key
