@@ -74,3 +74,4 @@ curl -L -H "Authorization: api-key $PLANET_API_KEY" \
 
 # Sources
 - [Planet API Getting Started](https://developers.planet.com/docs/quickstart/getting-started/)
+-[Create coordinates for areas of interest in geojson format](http://geojson.io)
