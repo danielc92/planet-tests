@@ -1,22 +1,35 @@
 # Project Title
-A few sentences about the project.
-What are you building?
-What problem are you trying to solve?
-Who is the project for? Timeframe?
+Testing usage of Planet API.
 
 # Before you get started
-Concepts/Software/Programming modules a user may have to read up on before getting started with this project. eg. 'Read about [neural networks](https://towardsdatascience.com/how-to-build-your-own-neural-network-from-scratch-in-python-68998a08e4f6?gi=44b811975215) before getting started.'
+- 
 
 # Setup
-**How to obtain this repository:**
+
+Environment:
+- Ubuntu 19.04 Operating System
+- Python 2.7 virtual environment
+
+Securing the api key:
 ```sh
-git clone https//link.to.this.projects.git-repo
+nano ~/.bashrc
+# Add this line
+export PLANET_API_KEY="topsecretkey"
+# To access it in python
+import os
+os.getenv('PLANET_API_KEY)
 ```
-**Modules/dependencies:**
-- `pandas`
-- `requests`
-- `jupyter`
-- `sklearn`
+
+
+
+Setting up python environment
+```sh
+# Find the location of the python 2.7 bin
+which python
+# Create virtual environment with it
+
+# 
+
 
 Install the following dependences:
 ```sh
@@ -28,9 +41,7 @@ pip install requirements.txt
 - Tests performed on this project. What did you do? Which files were used? Was it successful?
 
 # Contributors
-- Name of Contributor 1
-- Name of Contributor 2
+- Daniel Corcoran
 
 # Sources
-- Sources for techniques/tutorials used in this project to help newcomers
-- Sources for data used in this project
+- [Planet Getting Started API Acccess]()
