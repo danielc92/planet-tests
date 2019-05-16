@@ -2,7 +2,9 @@
 Testing usage of Planet API.
 
 # Before you get started
-- 
+- Basic python knowledge
+- Basic API knowledge
+- Ubuntu OS
 
 # Setup
 
