@@ -71,7 +71,13 @@ curl -L -H "Authorization: api-key $PLANET_API_KEY" \
 5. This will generate a download url. Open url in browser or access with `curl` or `wget`.
 
 # Tests
-- Tests performed on this project. What did you do? Which files were used? Was it successful?
+- Using geojson filter to generate ids given date range, cloud coverage as parameters
+- Listing counts of objects per day using `stats_endpoint.py`
+- Listing ids using the `search_endpoint.py` script
+- Listing a given id `asset_types`
+- Checking if given id is inactive or active
+- Generating a download link for a given id by activating it with `activation.py`
+- Downloading url for .tif (note: url will deactivate once it has been used one time)
 
 # Contributors
 - Daniel Corcoran
