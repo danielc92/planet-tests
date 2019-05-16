@@ -15,20 +15,30 @@ Securing the api key:
 nano ~/.bashrc
 # Add this line
 export PLANET_API_KEY="topsecretkey"
-# To access it in python
-import os
-os.getenv('PLANET_API_KEY)
 ```
 
+Accessing api key in python
+```python
+import os
+API_KEY = os.getenv('PLANET_API_KEY')
+```
 
+Installing python bindings (required to install/build `jq`)
+```sh
+sudo apt-get install autoconf automake build-essential libtool python-dev
+```
 
 Setting up python environment
 ```sh
-# Find the location of the python 2.7 bin
+# Find the location of the python 2.7 bin (this outputs the path /usr/bin/python for me)
 which python
 # Create virtual environment with it
-
-# 
+virtualenv --python=/usr/bin/python planet-env
+# Activate the env
+source planet-env/bin/activate
+# Install requirements
+pip install requests retrying jq
+```
 
 
 Install the following dependences:
@@ -44,4 +54,4 @@ pip install requirements.txt
 - Daniel Corcoran
 
 # Sources
-- [Planet Getting Started API Acccess]()
+- [Planet API Getting Started](https://developers.planet.com/docs/quickstart/getting-started/)
