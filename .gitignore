@@ -10,6 +10,8 @@
 #   git rm -r .ipynb_checkpoints/
 #
 
+virtual-environment/*
+
 ### Linux ###
 *~
 
